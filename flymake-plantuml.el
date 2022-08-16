@@ -106,16 +106,7 @@
                                                (setq line (buffer-substring (line-beginning-position) (line-end-position))))
                                       (let ((diag-reg (flymake-diag-region source (+ (string-to-number line) start-line))))
                                         (forward-line 1)
-                                        (push (flymake-make-diagnostic source (car diag-reg) (cdr diag-reg) :error (buffer-substring (line-beginning-position) (line-end-position))) diags))
-
-                                      ))
-
-                                  ;; (message "OUT: '%s'" line)
-
-                                  ;; (message "OUT LINE: '%s'" (buffer-substring (line-beginning-position) (line-end-position)))
-                                  ;; (forward-line 1)
-                                  ;; (message "OUT ERR: '%s'" (buffer-substring (line-beginning-position) (line-end-position)))
-                                  ))
+                                        (push (flymake-make-diagnostic source (car diag-reg) (cdr diag-reg) :error (buffer-substring (line-beginning-position) (line-end-position))) diags))))))
                               (forward-line 1)))
                           (funcall report-fn (reverse diags)))))
                     (flymake-log :warning "Canceling obsolete check %s"
