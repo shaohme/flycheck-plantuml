@@ -1,5 +1,8 @@
 # flymake-plantuml
 
+> [!IMPORTANT]
+> Project has moved to [Codeberg](https://codeberg.org/shaohme/flymake-plantuml)
+
 A Flymake backend for validating plantuml files for Emacs (27+), using
 plantuml's own syntax checker embedded in the executable jar.
 
